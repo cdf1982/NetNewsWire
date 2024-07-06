@@ -297,6 +297,10 @@ final class ArticleViewController: UIViewController {
 		coordinator.toggleStarredForCurrentArticle()
 	}
 	
+	@IBAction func bookmark(_ sender: Any) {
+		coordinator.saveCurrentArticleToGoodLinks()
+	}
+	
 	@IBAction func showActivityDialog(_ sender: Any) {
 		currentWebViewController?.showActivityDialog(popOverBarButtonItem: actionBarButtonItem)
 	}
