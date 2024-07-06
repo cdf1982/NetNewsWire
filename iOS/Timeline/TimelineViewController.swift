@@ -356,6 +356,7 @@ class TimelineViewController: UITableViewController, UndoableCommandRunner {
 				markActions.append(action)
 			}
 			markActions.append(self.toggleArticleStarStatusAction(article))
+			markActions.append(self.saveToGoodLinksAction(article))
 			if let action = self.markAboveAsReadAction(article, indexPath: indexPath) {
 				markActions.append(action)
 			}
@@ -778,6 +779,18 @@ private extension TimelineViewController {
 
 		let action = UIAction(title: title, image: image) { [weak self] action in
 			self?.coordinator.toggleStar(article)
+		}
+		
+		return action
+	}
+	
+	func saveToGoodLinksAction(_ article: Article) -> UIAction {
+		
+		let title = "Save to GoodLinks"
+		let image = UIImage(systemName: "bookmark")
+		
+		let action = UIAction(title: title, image: image) { [weak self] action in
+			self?.coordinator.saveToGoodLinks(article)
 		}
 		
 		return action
