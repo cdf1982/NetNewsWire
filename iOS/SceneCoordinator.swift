@@ -1093,6 +1093,20 @@ struct SidebarItemNode: Hashable {
 	func toggleStar(_ article: Article) {
 		markArticlesWithUndo([article], statusKey: .starred, flag: !article.status.starred)
 	}
+	
+	func saveCurrentArticleToGoodLinks() {
+		if let article = currentArticle {
+			saveToGoodLinks(article)
+		}
+	}
+	
+	func saveToGoodLinks(_ article: Article) {
+		if let url = article.url,
+		   let percentEncodedURLString = url.absoluteString.addingPercentEncoding(withAllowedCharacters: .alphanumerics),
+		   let goodlinksURL = URL(string: "goodlinks://x-callback-url/save?url=\(percentEncodedURLString)&tags=rss&quick=1&x-success=netnewswire://") {
+			UIApplication.shared.open(goodlinksURL, options: [:], completionHandler: nil)
+		}
+	}
 
 	func timelineFeedIsEqualTo(_ feed: Feed) -> Bool {
 		guard let timelineFeed = timelineFeed as? Feed else {
