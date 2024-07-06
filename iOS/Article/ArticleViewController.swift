@@ -24,7 +24,7 @@ final class ArticleViewController: UIViewController {
 	@IBOutlet private weak var prevArticleBarButtonItem: UIBarButtonItem!
 	@IBOutlet private weak var nextArticleBarButtonItem: UIBarButtonItem!
 	@IBOutlet private weak var readBarButtonItem: UIBarButtonItem!
-	@IBOutlet private weak var starBarButtonItem: UIBarButtonItem!
+	@IBOutlet private weak var bookmarkBarButtonItem: UIBarButtonItem!
 	@IBOutlet private weak var actionBarButtonItem: UIBarButtonItem!
 	
 	@IBOutlet private var searchBar: ArticleSearchBar!
@@ -196,7 +196,7 @@ final class ArticleViewController: UIViewController {
 			prevArticleBarButtonItem.isEnabled = false
 			nextArticleBarButtonItem.isEnabled = false
 			readBarButtonItem.isEnabled = false
-			starBarButtonItem.isEnabled = false
+			bookmarkBarButtonItem.isEnabled = false
 			actionBarButtonItem.isEnabled = false
 			return
 		}
@@ -205,7 +205,7 @@ final class ArticleViewController: UIViewController {
 		prevArticleBarButtonItem.isEnabled = coordinator.isPrevArticleAvailable
 		nextArticleBarButtonItem.isEnabled = coordinator.isNextArticleAvailable
 		readBarButtonItem.isEnabled = true
-		starBarButtonItem.isEnabled = true
+		bookmarkBarButtonItem.isEnabled = true
 		
 		let permalinkPresent = article.preferredLink != nil
 		articleExtractorButton.isEnabled = permalinkPresent && !AppDefaults.shared.isDeveloperBuild
