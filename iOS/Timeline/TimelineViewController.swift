@@ -275,17 +275,25 @@ class TimelineViewController: UITableViewController, UndoableCommandRunner {
 		guard let article = dataSource.itemIdentifier(for: indexPath) else { return nil }
 		
 		// Set up the star action
-		let starTitle = article.status.starred ?
-			NSLocalizedString("Unstar", comment: "Unstar") :
-			NSLocalizedString("Star", comment: "Star")
+//		let starTitle = article.status.starred ?
+//			NSLocalizedString("Unstar", comment: "Unstar") :
+//			NSLocalizedString("Star", comment: "Star")
+//		
+		//		let starAction = UIContextualAction(style: .normal, title: starTitle) { [weak self] (action, view, completion) in
+		//			self?.coordinator.toggleStar(article)
+		//			completion(true)
+		//		}
+		//
+		//		starAction.image = article.status.starred ? AppAssets.starOpenImage : AppAssets.starClosedImage
+		//		starAction.backgroundColor = AppAssets.starColor
 		
-		let starAction = UIContextualAction(style: .normal, title: starTitle) { [weak self] (action, view, completion) in
-			self?.coordinator.toggleStar(article)
+		let bookmarkAction = UIContextualAction(style: .normal, title: "Save to GoodLinks") { [weak self] (action, view, completion) in
+			self?.coordinator.saveToGoodLinks(article)
 			completion(true)
 		}
 		
-		starAction.image = article.status.starred ? AppAssets.starOpenImage : AppAssets.starClosedImage
-		starAction.backgroundColor = AppAssets.starColor
+		bookmarkAction.image = UIImage(systemName: "bookmark")
+		bookmarkAction.backgroundColor = .systemPink
 		
 		// Set up the read action
 		let moreTitle = NSLocalizedString("More", comment: "More")
@@ -337,7 +345,7 @@ class TimelineViewController: UITableViewController, UndoableCommandRunner {
 		moreAction.image = AppAssets.moreImage
 		moreAction.backgroundColor = UIColor.systemGray
 
-		return UISwipeActionsConfiguration(actions: [starAction, moreAction])
+		return UISwipeActionsConfiguration(actions: [bookmarkAction, moreAction])
 		
 	}
 
