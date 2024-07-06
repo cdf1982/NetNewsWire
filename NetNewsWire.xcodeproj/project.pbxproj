@@ -311,6 +311,7 @@
 		51FFF0C4235EE8E5002762AA /* VibrantButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51FFF0C3235EE8E5002762AA /* VibrantButton.swift */; };
 		55E15BCB229D65A900D6602A /* AccountsReaderAPI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E15BC1229D65A900D6602A /* AccountsReaderAPI.xib */; };
 		55E15BCC229D65A900D6602A /* AccountsReaderAPIWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E15BCA229D65A900D6602A /* AccountsReaderAPIWindowController.swift */; };
+		5A4CFFE32C3971B9003B24E9 /* ReaderAPI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8410C4A42BC1E28200D4F799 /* ReaderAPI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5F323809231DF9F000706F6B /* VibrantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F323808231DF9F000706F6B /* VibrantTableViewCell.swift */; };
 		653813432680E2DA007A082C /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E46C7C1F75EF7B005ECFB3 /* AppDefaults.swift */; };
 		653813442680E2DA007A082C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510C416024E5CDE3008226FD /* ShareViewController.swift */; };
@@ -689,6 +690,7 @@
 				845611752BBD145D00507B73 /* ParserObjC in Embed Frameworks */,
 				513F32722593EE6F0003048F /* Articles in Embed Frameworks */,
 				513F32812593EF180003048F /* Account in Embed Frameworks */,
+				5A4CFFE32C3971B9003B24E9 /* ReaderAPI in Embed Frameworks */,
 				8426DBB92BFDAD9200E98109 /* Core in Embed Frameworks */,
 				513F32752593EE6F0003048F /* ArticlesDatabase in Embed Frameworks */,
 				845611722BBD145D00507B73 /* Parser in Embed Frameworks */,
