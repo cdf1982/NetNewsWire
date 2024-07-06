@@ -221,13 +221,13 @@ final class ArticleViewController: UIViewController {
 			readBarButtonItem.accLabelText = NSLocalizedString("Selected - Mark Article Unread", comment: "Selected - Mark Article Unread")
 		}
 		
-		if article.status.starred {
-			starBarButtonItem.image = AppAssets.starClosedImage
-			starBarButtonItem.accLabelText = NSLocalizedString("Selected - Star Article", comment: "Selected - Star Article")
-		} else {
-			starBarButtonItem.image = AppAssets.starOpenImage
-			starBarButtonItem.accLabelText = NSLocalizedString("Star Article", comment: "Star Article")
-		}
+		//		if article.status.starred {
+		//			bookmarkBarButtonItem.image = AppAssets.starClosedImage
+		//			bookmarkBarButtonItem.accLabelText = NSLocalizedString("Selected - Star Article", comment: "Selected - Star Article")
+		//		} else {
+		//			bookmarkBarButtonItem.image = AppAssets.starOpenImage
+		//			bookmarkBarButtonItem.accLabelText = NSLocalizedString("Star Article", comment: "Star Article")
+		//		}
 	}
 
 	override func contentScrollView(for edge: NSDirectionalRectEdge) -> UIScrollView? {
