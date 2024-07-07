@@ -18,6 +18,7 @@ import Images
 class SidebarViewController: UITableViewController, UndoableCommandRunner {
 
 	@IBOutlet weak var filterButton: UIBarButtonItem!
+	@IBOutlet weak var settingsButton: UIBarButtonItem!
 	private var refreshProgressView: RefreshProgressView?
 	@IBOutlet weak var addNewItemButton: UIBarButtonItem! {
 		didSet {

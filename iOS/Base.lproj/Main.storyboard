@@ -251,6 +251,17 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Feeds" customizationIdentifier="navigationbar.feeds.title" id="Zdf-7t-Un8">
+                        <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" id="vhA-qx-PDk">
+                            <attributedString key="userComments">
+                                <fragment content="Feeds Filter bar button item."/>
+                            </attributedString>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accLabelText" value="Feeds Filter"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="settings:" destination="7bK-jq-Zjz" id="3Jp-RS-4Bl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="line.3.horizontal.decrease.circle" catalog="system" id="9ro-XY-5xU">
                             <attributedString key="userComments">
                                 <fragment content="Feeds Filter bar button item."/>
@@ -274,6 +285,7 @@
                     <connections>
                         <outlet property="addNewItemButton" destination="YFE-wd-vFC" id="NMJ-uE-zGh"/>
                         <outlet property="filterButton" destination="9ro-XY-5xU" id="PSL-lE-ITK"/>
+                        <outlet property="settingsButton" destination="vhA-qx-PDk" id="pbR-Za-tpV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
