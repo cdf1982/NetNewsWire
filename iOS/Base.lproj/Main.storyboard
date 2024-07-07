@@ -262,17 +262,27 @@
                                 <action selector="settings:" destination="7bK-jq-Zjz" id="3Jp-RS-4Bl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="line.3.horizontal.decrease.circle" catalog="system" id="9ro-XY-5xU">
-                            <attributedString key="userComments">
-                                <fragment content="Feeds Filter bar button item."/>
-                            </attributedString>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="accLabelText" value="Feeds Filter"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="toggleFilter:" destination="7bK-jq-Zjz" id="jmL-ei-avl"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="line.3.horizontal.decrease.circle" catalog="system" id="9ro-XY-5xU">
+                                <attributedString key="userComments">
+                                    <fragment content="Feeds Filter bar button item."/>
+                                </attributedString>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accLabelText" value="Feeds Filter"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleFilter:" destination="7bK-jq-Zjz" id="jmL-ei-avl"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="plus" catalog="system" id="Opf-WF-UEq">
+                                <attributedString key="userComments">
+                                    <fragment content="Feeds Filter bar button item."/>
+                                </attributedString>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accLabelText" value="Feeds Filter"/>
+                                </userDefinedRuntimeAttributes>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                         <attributedString key="userComments">
                             <fragment content="Title used in the navigation bar for the Feeds list."/>
                         </attributedString>
@@ -286,6 +296,7 @@
                         <outlet property="addNewItemButton" destination="YFE-wd-vFC" id="NMJ-uE-zGh"/>
                         <outlet property="filterButton" destination="9ro-XY-5xU" id="PSL-lE-ITK"/>
                         <outlet property="settingsButton" destination="vhA-qx-PDk" id="pbR-Za-tpV"/>
+                        <outlet property="topAddButton" destination="Opf-WF-UEq" id="QOo-FV-FgZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -492,6 +503,7 @@
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <image name="multiply.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <namedColor name="barBackgroundColor">

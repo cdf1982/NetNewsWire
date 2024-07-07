@@ -19,6 +19,7 @@ class SidebarViewController: UITableViewController, UndoableCommandRunner {
 
 	@IBOutlet weak var filterButton: UIBarButtonItem!
 	@IBOutlet weak var settingsButton: UIBarButtonItem!
+	@IBOutlet weak var topAddButton: UIBarButtonItem!
 	private var refreshProgressView: RefreshProgressView?
 	@IBOutlet weak var addNewItemButton: UIBarButtonItem! {
 		didSet {
@@ -613,6 +614,7 @@ class SidebarViewController: UITableViewController, UndoableCommandRunner {
 		let contextMenu = UIMenu(title: NSLocalizedString("Add Item", comment: "Add Item"), image: nil, identifier: nil, options: [], children: menuItems.reversed())
 
 		self.addNewItemButton.menu = contextMenu
+		self.topAddButton.menu = contextMenu
 	}
 
 	func focus() {
